@@ -50,4 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetDir) \\100.100.100.2\RemoteDebugExample /E /Y</PostBuildEvent>
+  </PropertyGroup>
 </Project>
